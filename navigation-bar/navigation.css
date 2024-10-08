@@ -34,6 +34,10 @@ nav {
   white-space: nowrap;
 }
 
+.bottom-row-1 {
+  display: none;
+}
+
 .search-container {
   position: relative;
   display: flex;
@@ -140,13 +144,13 @@ nav {
     max-width: 1200px;
   }
 
-  .bottom-row {
+  .bottom-row-1 {
     padding: 20px 20px;
     justify-content: flex-end;
   }
 
   .nav-links.nav-active {
-    height: 320px; /* Adjust the height based on your content */
+    height: 400px; /* Adjust the height based on your content */
   }
 
   .nav-links li {
@@ -154,8 +158,23 @@ nav {
   }
 
   .burger {
-    display: inline;
+    display: block;
     align-self: flex-end;
+  }
+
+  .bottom-row {
+    display: none;
+  }
+
+  .bottom-row-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: flex-end;
   }
 
   .search-container input {
@@ -175,11 +194,27 @@ nav {
   .search-btn {
     display: block;
     font-size: 24px;
-  
+    display: none;
   }
 
   .search-container {
     flex: 1;
     justify-content: flex-end;
+    display: none;
+  }
+
+  .search-input {
+    font-size: 14px;
+    width: 100%;
+    background-image: url(./MagnifyingGlass.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 16px 45px;
+    background-color: #f8f4ed;
+    border: 0px solid #000;
+    box-shadow: none;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    
   }
 }
