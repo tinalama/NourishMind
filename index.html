@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar with Search and Burger Menu</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- Top Row -->
+      <div class="top-row">
+        <div class="logo">
+          <h2>Nourish Minds</h2>
+        </div>
+        <div class="search-container" id="search-container">
+          <input type="text" placeholder="Search blogs" id="search-input" />
+          <button class="search-btn" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <button class="contact-btn">Contact a Professional</button>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="bottom-row">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Check your symptoms</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="burger" id="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const nav = document.getElementById("nav-links");
+      const searchBtn = document.getElementById("search-btn");
+      const searchContainer = document.getElementById("search-container");
+      const searchInput = document.getElementById("search-input");
+
+      burger.addEventListener("click", () => {
+        nav.classList.toggle("nav-active");
+      });
+
+      searchBtn.addEventListener("click", () => {
+        searchContainer.classList.toggle("search-active");
+        if (searchContainer.classList.contains("search-active")) {
+          searchInput.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
