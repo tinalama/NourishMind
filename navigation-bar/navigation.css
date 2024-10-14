@@ -82,6 +82,15 @@ nav {
   border: 1px solid #6a6666;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.15s;
+}
+.contact-btn:hover {
+  background-color: #7a7979;
+  color: white;
+}
+
+.contact-btn:active {
+  background-color: #6a6666;;
 }
 
 .bottom-row {

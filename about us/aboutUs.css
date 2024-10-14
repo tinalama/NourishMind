@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 .about {
   min-height: 100vh;
   max-width: 1200px;
@@ -14,7 +15,8 @@
   display: flex;
   justify-content: center;
   margin: 80px 0 80px 0;
-    text-align: center;
+  text-align: center;
+  font-family: "Abhaya Libre", serif;
 }
 
 .about-info {
@@ -29,11 +31,9 @@
 }
 
 .about-mission {
-list-style: none;
-text-align: left;
+  list-style: none;
+  text-align: left;
 }
-
-
 
 .trust {
   text-align: center;
@@ -42,7 +42,6 @@ text-align: left;
   font-weight: 700;
 }
 
-.about-p{
+.about-p {
   padding: 10px;
 }
-
