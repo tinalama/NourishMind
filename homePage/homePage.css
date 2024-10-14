@@ -7,18 +7,19 @@
   margin-left: auto;
   margin-right: auto;
   padding: 20px 100px;
+  
 }
 
-.home-hero-title{
-display: flex;
-flex-direction: row;
-margin: 50px 0 50px 0;
-justify-content: space-between;
-align-items: center;
-gap: 20px;
+.home-hero-title {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 50px 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
-.home-hero-paragraph{
+.home-hero-paragraph {
   max-width: 450px;
 }
 
@@ -33,8 +34,7 @@ gap: 20px;
   color: rgb(70, 70, 70);
 }
 
-
-.btn-seeMore {
+.home-btn {
   background-color: transparent;
   border: none;
   color: #000;
@@ -49,21 +49,20 @@ gap: 20px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15);
 }
 
-.btn-seeMore:hover {
+.home-btn:hover {
   background-color: #7a7979;
   color: white;
 }
 
-.btn-seeMore:active {
+.home-btn:active {
   background-color: #6a6666;
   transform: translate(5px, 5px);
   box-shadow: none;
 }
 
-.home-hero-image{
+.home-hero-image {
   max-width: 500px;
   width: 100%;
- 
 }
 
 .hero-image {
@@ -73,24 +72,99 @@ gap: 20px;
   border-radius: 80px;
 }
 
-.home-hero-image{
+.home-hero-image {
   max-width: 500px;
   width: 100%;
 }
 
 .home-mission {
   display: flex;
-  /* justify-content: center; */
+  flex-direction: column;
+  margin: 50px 0 50px 0;
+  color: grey;
+}
 
+.home-mission h6 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.home-mission h1 {
+  text-align: center;
+  line-height: 40px;
+}
+
+.home-blogs {
+  margin: 50px 0 50px;
+}
+
+.home-blog-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.home-blog-title h1 {
+  font-size: 70 px;
+}
+
+.home-blog-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-blog-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  text-overflow: ellipsis;
+}
+
+.home-blog-description p {
+  font-size: 15px;
+}
+
+.home-blog-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.home-check-symptoms {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 60px 0 60px 0;
+}
+
+.home-check-symptoms h1 {
+  margin-bottom: 15px;
+  color: rgb(106, 105, 105);
+  font-size: 30px;
+}
+.home-check-symptoms h5 {
+  margin-bottom: 15px;
+  color: grey;
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 768px) {
-  .home-hero-title{
-    display:flex;
+  .home-hero-title {
+    display: flex;
     flex-direction: column;
     gap: 50px;
   }
   .hero-image {
-    /* margin-top: 10px; */
+    margin-top: 10px;
+  }
+  .home-blogs {
+    display: flex;
+    flex-direction: column;
   }
 }
