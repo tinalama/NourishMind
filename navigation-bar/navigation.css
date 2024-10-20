@@ -107,6 +107,7 @@ nav {
   display: flex;
   list-style: none;
   gap: 26px;
+  font-family: "Poppins";
 }
 
 .nav-links a {
@@ -114,6 +115,7 @@ nav {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Poppins";
 }
 
 .burger {

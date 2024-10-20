@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../navigation-bar/navigation.css" />
     <link rel="stylesheet" href="../footer/footer.css" />
     <link rel="stylesheet" href="homePage.css" />
+    <link rel="stylesheet" href="carousel.css" />
   </head>
   <body>
     <nav>
@@ -78,56 +79,129 @@
     </nav>
 
     <section class="home">
-      <div class="home-hero-title">
-        <div class="home-hero-paragraph">
-          <h1>Nourish your Mind, Nurture your <br>Well-being.</h1>
-          <p>
-            At NourishMind, we shine a light on eating disorders, offering support
-            and guidance for a healthier mind and body. Empower yourself with the
-            knowledge to heal and thrive.
-          </p>
-          <button class="home-btn">See more</button>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="./carousel/one.png" style="width: 100%" />
         </div>
-        <div class="home-hero-image">
-          <img class="hero-image" src="./aboutUs-img/about us.webp" />
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="./carousel/two.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="./carousel/three.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="./carousel/four.png" style="width: 100%" />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+
+      <div class="home-hero-title">
+        <div class="home-hero-container">
+          <div class="home-hero-paragraph">
+            <h1>
+              Nourish your Mind, Nurture your <br />
+              <span style="color: #b0d33f">Well-being</span>
+            </h1>
+            <p>
+              At NourishMind, we shine a light on eating disorders, offering
+              support and guidance for a healthier mind and body. Empower
+              yourself with the knowledge to heal and thrive.
+            </p>
+            <button class="home-btn">See more</button>
+          </div>
+          <div class="home-hero-image">
+            <img class="hero-image" src="./aboutUs-img/about us.webp" />
+          </div>
         </div>
       </div>
 
       <div class="home-mission">
-        <h6>Our Mission</h6>
-        <h1>We empower you with the knowledge and skills you need to strengthen your mental health & well-being</h1>
+        <div class="home-mission-container">
+          <h6>Our Mission</h6>
+          <h1 style="color: black">
+            "We empower you with the knowledge and skills you need to strengthen
+            your mental health & well-being"
+          </h1>
+        </div>
       </div>
 
       <div class="home-blogs">
-        <div class="home-blog-title">
-          <h1>Blogs</h1>
-          <button class="home-btn">View More Blogs</button>
-        </div>
-        <div class="home-cards">
+        <div class="home-blogs-container">
+          <div class="home-blog-title">
+            <h1>Blogs</h1>
+            <button class="home-btn">View More Blogs</button>
+          </div>
+          <div class="home-cards">
             <div class="blog-card-description">
-              <img class="blog-card-img" src="./aboutUs-img/Anorexia-Nervosa-.webp">
+              <img
+                class="blog-card-img"
+                src="./aboutUs-img/Anorexia-Nervosa-.webp"
+              />
               <div class="blog-card-content">
-                <h4 style=" font-size: 16px;">Anorexia: Is It a Struggle with Self-Image and Control?</h4>
-                <p> Uncover the key signs, symptoms, and root causes of Anorexia Nervosa. Find out how you can offer support to those who are navigating this difficult journey.</p>
+                <h4 style="font-size: 16px">
+                  Anorexia: Is It a Struggle with Self-Image and Control?
+                </h4>
+                <p>
+                  Uncover the key signs, symptoms, and root causes of Anorexia
+                  Nervosa. Find out how you can offer support to those who are
+                  navigating this difficult journey.
+                </p>
                 <a href="" class="read-more">Read More</a>
               </div>
             </div>
             <div class="blog-card-description">
-              <img class="blog-card-img" src="./aboutUs-img/bulimia.png">
+              <img class="blog-card-img" src="./aboutUs-img/bulimia.png" />
               <div class="blog-card-content">
-                <h4 style=" font-size: 16px;">Bulimia Nervosa: Coping with the Cycle of Binge and Purge</h4>
-                <p> Explore the complexities of Bulimia Nervosa and how to identify the patterns of binge eating and purging behaviors. Find out more about it.</p>
+                <h4 style="font-size: 16px">
+                  Bulimia Nervosa: Coping with the Cycle of Binge and Purge
+                </h4>
+                <p>
+                  Explore the complexities of Bulimia Nervosa and how to
+                  identify the patterns of binge eating and purging behaviors.
+                  Find out more about it.
+                </p>
                 <a href="" class="read-more">Read More</a>
               </div>
             </div>
             <div class="blog-card-description">
-              <img class="blog-card-img" src="./aboutUs-img/DepressionBED.jpeg">
+              <img
+                class="blog-card-img"
+                src="./aboutUs-img/DepressionBED.jpeg"
+              />
               <div class="blog-card-content">
-                <h4 style=" font-size: 16px;">Breaking the Silence on Binge Eating Disorder</h4>
-                <p>Learn about the emotional aspects of Binge Eating Disorder and how to recognize when overeating becomes a serious mental health concern.</p>
+                <h4 style="font-size: 16px">
+                  Breaking the Silence on Binge Eating Disorder
+                </h4>
+                <p>
+                  Learn about the emotional aspects of Binge Eating Disorder and
+                  how to recognize when overeating becomes a serious mental
+                  health concern.
+                </p>
                 <a href="" class="read-more">Read More</a>
               </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -135,9 +209,6 @@
         <h1>Check your Symptoms</h1>
         <h5>Take a short quiz and self analyze about any eating disorders.</h5>
         <button class="home-btn">Take a quiz</button>
-      </div>
-     
-    
       </div>
     </section>
 
@@ -218,6 +289,74 @@
       burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
       });
+    </script>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Function to handle the next and previous buttons
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Function to handle the dot controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      // Main function to display slides
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      // Auto slide functionality with an interval
+      function autoSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        setTimeout(autoSlides, 6000); // Auto slide every 6 seconds
+      }
+
+      // Start the auto slide when the page loads
+      autoSlides();
     </script>
   </body>
 </html>

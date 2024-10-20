@@ -1,21 +1,30 @@
 .home {
   min-height: 100vh;
-  max-width: 1200px;
+
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 100px;
 }
 
-.home-hero-title {
+.home-hero-container {
+  max-width: 1200px;
+  padding: 80px 100px;
   display: flex;
   flex-direction: row;
-  margin: 50px 0 50px 0;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+
+.home-hero-title {
+  margin-top: 100px;
+  background-color: #fefae0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .home-hero-paragraph {
@@ -23,12 +32,13 @@
 }
 
 .home-hero-paragraph h1 {
-  font-size: 46px;
+  font-size: 40px;
   margin-bottom: 20px;
-  line-height: 47px;
+  line-height: 45px;
 }
 
 .home-hero-paragraph p {
+  font-size: 20px;
   margin-bottom: 20px;
   color: rgb(70, 70, 70);
 }
@@ -78,11 +88,17 @@
 
 .home-mission {
   display: flex;
+  color: grey;
+  justify-content: center;
+  width: 100%;
+}
+.home-mission-container {
+  display: flex;
   flex-direction: column;
   margin: 50px 0 50px 0;
-  color: grey;
+  max-width: 1200px;
+  padding: 80px 100px;
 }
-
 .home-mission h6 {
   display: flex;
   justify-content: center;
@@ -96,7 +112,16 @@
 }
 
 .home-blogs {
+  background-color: #fefae0;
   margin: 50px 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.home-blogs-container {
+  max-width: 1200px;
+  padding: 80px 60px;
 }
 
 .home-blog-title {
@@ -110,19 +135,23 @@
 }
 
 .home-cards {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .blog-card-description {
   display: flex;
   flex-direction: column;
-  max-width: 325px;
+  max-width: 320px;
+  min-width: 250px;
   max-height: 400px;
   text-overflow: ellipsis;
   background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .blog-card-description h4 {
@@ -143,7 +172,7 @@
   object-fit: cover;
 }
 
-.blog-card-content{
+.blog-card-content {
   padding: 16px;
 }
 
