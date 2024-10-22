@@ -1,3 +1,11 @@
+.whole-checkSymptoms{
+  background-color: #FEFAE0;
+}
+
+* {
+  font-family: "Poppins";
+}
+
 .checkSymptoms {
   min-height: 100vh;
   max-width: 1200px;
@@ -9,12 +17,11 @@
   padding: 20px 100px;
 }
 
-
-
 .checkSymptoms-heading h1 {
   text-align: center;
   margin: 80px;
-  font-size: 35px;
+  font-size: 45px;
+  font-family: "Abhaya Libre";
 }
 
 .all-checkSymptoms-card {
@@ -50,6 +57,7 @@
 
 .question p {
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .symptomForm {
@@ -154,7 +162,7 @@ input[type="radio"]:checked + .disagree {
   cursor: pointer;
   transition: all 0.15s;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15);
- 
+  margin-bottom: 100px;
 }
 
 .submit:hover {
@@ -172,4 +180,17 @@ input[type="radio"]:checked + .disagree {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.result p{
+   text-align: center;
+   max-width: 500px;
+}
+
+.result{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

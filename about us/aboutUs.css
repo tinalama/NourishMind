@@ -19,9 +19,18 @@
   font-family: "Abhaya Libre", serif;
 }
 
+.about-heading h1 {
+  font-family: "Abhaya Libre";
+  font-size: 45px;
+}
+
 .about-info {
   text-align: center;
   max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-info-img {
@@ -30,9 +39,21 @@
   padding-bottom: 20px;
 }
 
+.about-info p{
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .about-mission {
   list-style: none;
   text-align: left;
+}
+
+.about-mission li {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .trust {

@@ -103,6 +103,10 @@ nav {
   width: 100%;
 }
 
+.bottom-row .nav-links li a:hover {
+  color: #333;
+}
+
 .nav-links {
   display: flex;
   list-style: none;

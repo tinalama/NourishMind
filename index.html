@@ -24,8 +24,8 @@
     />
     <link rel="stylesheet" href="../navigation-bar/navigation.css" />
     <link rel="stylesheet" href="../footer/footer.css" />
-    <link rel="stylesheet" href="homePage.css" />
-    <link rel="stylesheet" href="carousel.css" />
+    <link rel="stylesheet" href="./homePage/homePage.css" />
+    <link rel="stylesheet" href="./homePage/carousel.css" />
   </head>
   <body>
     <nav>
@@ -51,10 +51,14 @@
                 id="search-input"
               />
             </li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about us/aboutUs.html">About Us</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Check your symptoms</a></li>
+            <li>
+              <a href="/check symptoms/checkSymptoms.html"
+                >Check your symptoms</a
+              >
+            </li>
             <li><a href="#">Contact Us</a></li>
           </ul>
           <div class="burger" id="burger">
@@ -66,10 +70,12 @@
       <!-- Bottom Row -->
       <div class="bottom-row">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a style="font-weight: bold" href="/">Home</a></li>
+          <li><a href="/about us/aboutUs.html">About Us</a></li>
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Check your symptoms</a></li>
+          <li>
+            <a href="/check symptoms/checkSymptoms.html">Check your symptoms</a>
+          </li>
           <li><a href="#">Contact Us</a></li>
         </ul>
         <div class="burger" id="burger">
@@ -80,26 +86,27 @@
 
     <section class="home">
       <!-- Slideshow container -->
+
       <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 4</div>
-          <img src="./carousel/one.png" style="width: 100%" />
+          <img src="./homePage/carousel/one.png" style="width: 100%" />
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">2 / 4</div>
-          <img src="./carousel/two.png" style="width: 100%" />
+          <img src="./homePage/carousel/two.png" style="width: 100%" />
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">3 / 4</div>
-          <img src="./carousel/three.png" style="width: 100%" />
+          <img src="./homePage//carousel/three.png" style="width: 100%" />
         </div>
 
         <div class="mySlides fade">
           <div class="numbertext">4 / 4</div>
-          <img src="./carousel/four.png" style="width: 100%" />
+          <img src="./homePage/carousel/four.png" style="width: 100%" />
         </div>
 
         <!-- Next and previous buttons -->
@@ -128,10 +135,13 @@
               support and guidance for a healthier mind and body. Empower
               yourself with the knowledge to heal and thrive.
             </p>
-            <button class="home-btn">See more</button>
+            <a href="./about us/aboutUs.html" class="home-btn">See more</a>
           </div>
           <div class="home-hero-image">
-            <img class="hero-image" src="./aboutUs-img/about us.webp" />
+            <img
+              class="hero-image"
+              src="./homePage/aboutUs-img/about us.webp"
+            />
           </div>
         </div>
       </div>
@@ -156,7 +166,7 @@
             <div class="blog-card-description">
               <img
                 class="blog-card-img"
-                src="./aboutUs-img/Anorexia-Nervosa-.webp"
+                src="./homePage/aboutUs-img/Anorexia-Nervosa-.webp"
               />
               <div class="blog-card-content">
                 <h4 style="font-size: 16px">
@@ -171,7 +181,10 @@
               </div>
             </div>
             <div class="blog-card-description">
-              <img class="blog-card-img" src="./aboutUs-img/bulimia.png" />
+              <img
+                class="blog-card-img"
+                src="./homePage/aboutUs-img/bulimia.png"
+              />
               <div class="blog-card-content">
                 <h4 style="font-size: 16px">
                   Bulimia Nervosa: Coping with the Cycle of Binge and Purge
@@ -187,7 +200,7 @@
             <div class="blog-card-description">
               <img
                 class="blog-card-img"
-                src="./aboutUs-img/DepressionBED.jpeg"
+                src="./homePage/aboutUs-img/DepressionBED.jpeg"
               />
               <div class="blog-card-content">
                 <h4 style="font-size: 16px">
@@ -208,7 +221,8 @@
       <div class="home-check-symptoms">
         <h1>Check your Symptoms</h1>
         <h5>Take a short quiz and self analyze about any eating disorders.</h5>
-        <button class="home-btn">Take a quiz</button>
+        <img src="./homePage/aboutUs-img/quiz.png" style="width: 400px;">
+        <a href="./check symptoms/checkSymptoms.html" class="home-btn">Take a quiz</a>
       </div>
     </section>
 
@@ -288,7 +302,7 @@
 
       burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
-      });
+      }); 
     </script>
 
     <script>
