@@ -166,7 +166,9 @@ nav {
   }
 
   .nav-links.nav-active {
-    height: 400px; /* Adjust the height based on your content */
+    height: 400px;
+    position: relative;
+    z-index: 999;
   }
 
   .nav-links li {
