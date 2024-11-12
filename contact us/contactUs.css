@@ -315,6 +315,16 @@ textarea {
     margin: 20px auto;
     width: 95%;
   }
+  .experts-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .experts-cards-top,
+  .experts-cards-bottom {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 480px) {

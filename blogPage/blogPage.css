@@ -72,3 +72,16 @@
 .blogPage-card-content {
   padding: 16px;
 }
+
+@media only screen and (max-width: 768px) {
+  .main-blogPage {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .blogPage-blogs {
+    display: flex;
+    flex-direction: column;
+  }
+}
