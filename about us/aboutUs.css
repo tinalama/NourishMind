@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins";
+}
 .about {
   min-height: 100vh;
   max-width: 1200px;
@@ -39,7 +43,7 @@
   padding-bottom: 20px;
 }
 
-.about-info p{
+.about-info p {
   max-width: 600px;
   width: 100%;
   margin-top: 20px;
