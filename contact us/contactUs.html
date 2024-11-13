@@ -271,7 +271,8 @@
           <form action="#" method="post" id="contact_form">
             <div class="name">
               <label for="name"></label>
-              <input class="contact-input"
+              <input
+                class="contact-input"
                 type="text"
                 placeholder="Full Name"
                 name="name"
@@ -281,7 +282,8 @@
             </div>
             <div class="email">
               <label for="email"></label>
-              <input class="contact-input email_input"
+              <input
+                class="contact-input email_input"
                 type="email"
                 placeholder="E-mail"
                 name="email"
@@ -291,7 +293,8 @@
             </div>
             <div class="telephone">
               <label for="name"></label>
-              <input class="contact-input"
+              <input
+                class="contact-input"
                 type="text"
                 placeholder="Number"
                 name="telephone"
@@ -313,7 +316,12 @@
               ></textarea>
             </div>
             <div class="submit">
-              <input class="contact-input" type="submit" value="Send Message" id="form_button" />
+              <input
+                class="contact-input"
+                type="submit"
+                value="Send Message"
+                id="form_button"
+              />
             </div>
           </form>
           <!-- // End form -->
@@ -410,6 +418,55 @@
 
       burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
+      });
+    </script>
+
+    <script>
+      const dummySuggestions = [
+        {
+          name: "Anorexia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/anorexiaBlog.html",
+        },
+        {
+          name: "Bulimia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bulimiaBlog.html",
+        },
+        {
+          name: "Binge Eating Disorder",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bingeEatingBlog.html",
+        },
+      ];
+
+      const inputSearch = document.getElementById("search-input");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      function filterSuggestions(input) {
+        return dummySuggestions.filter((suggestion) =>
+          suggestion.name.toLowerCase().includes(input.toLowerCase())
+        );
+      }
+
+      inputSearch.addEventListener("input", (event) => {
+        const input = event.target.value;
+        suggestionsBox.innerHTML = "";
+
+        if (input) {
+          const filteredSuggestions = filterSuggestions(input);
+
+          filteredSuggestions.forEach((suggestion) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.className = "suggestion-item";
+            suggestionItem.textContent = suggestion.name;
+
+            suggestionItem.addEventListener("click", () => {
+              inputSearch.value = suggestion.name;
+              suggestionsBox.innerHTML = "";
+              window.location.href = suggestion.url;
+            });
+
+            suggestionsBox.appendChild(suggestionItem);
+          });
+        }
       });
     </script>
   </body>

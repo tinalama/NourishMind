@@ -313,5 +313,54 @@
         nav.classList.toggle("nav-active");
       });
     </script>
+
+    <script>
+      const dummySuggestions = [
+        {
+          name: "Anorexia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/anorexiaBlog.html",
+        },
+        {
+          name: "Bulimia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bulimiaBlog.html",
+        },
+        {
+          name: "Binge Eating Disorder",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bingeEatingBlog.html",
+        },
+      ];
+
+      const inputSearch = document.getElementById("search-input");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      function filterSuggestions(input) {
+        return dummySuggestions.filter((suggestion) =>
+          suggestion.name.toLowerCase().includes(input.toLowerCase())
+        );
+      }
+
+      inputSearch.addEventListener("input", (event) => {
+        const input = event.target.value;
+        suggestionsBox.innerHTML = "";
+
+        if (input) {
+          const filteredSuggestions = filterSuggestions(input);
+
+          filteredSuggestions.forEach((suggestion) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.className = "suggestion-item";
+            suggestionItem.textContent = suggestion.name;
+
+            suggestionItem.addEventListener("click", () => {
+              inputSearch.value = suggestion.name;
+              suggestionsBox.innerHTML = "";
+              window.location.href = suggestion.url;
+            });
+
+            suggestionsBox.appendChild(suggestionItem);
+          });
+        }
+      });
+    </script>
   </body>
 </html>

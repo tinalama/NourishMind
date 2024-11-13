@@ -456,16 +456,19 @@
 
     <script>
       const dummySuggestions = [
-        "Anorexia Nervosa",
-        "Bulimia Nervosa",
-        "Binge Eating Disorder",
-        "Mental Health",
-        "Self-Care Tips",
-        "Symptoms of Eating Disorders",
-        "Healthy Eating",
-        "Mindful Eating",
-        "Overcoming Anxiety",
-        "Depression and Eating Disorders",
+        {
+          name: "Anorexia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/anorexiaBlog.html",
+        },
+        {
+          name: "Bulimia Nervosa",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bulimiaBlog.html",
+        },
+        {
+          name: "Binge Eating Disorder",
+          url: "https://tinalama.github.io/NourishMind/detailedBlogPage/bingeEatingBlog.html",
+        },
+        
       ];
 
       const inputSearch = document.getElementById("search-input");
@@ -473,13 +476,12 @@
 
       function filterSuggestions(input) {
         return dummySuggestions.filter((suggestion) =>
-          suggestion.toLowerCase().includes(input.toLowerCase())
+          suggestion.name.toLowerCase().includes(input.toLowerCase())
         );
       }
 
       inputSearch.addEventListener("input", (event) => {
         const input = event.target.value;
-
         suggestionsBox.innerHTML = "";
 
         if (input) {
@@ -488,11 +490,12 @@
           filteredSuggestions.forEach((suggestion) => {
             const suggestionItem = document.createElement("div");
             suggestionItem.className = "suggestion-item";
-            suggestionItem.textContent = suggestion;
+            suggestionItem.textContent = suggestion.name;
 
             suggestionItem.addEventListener("click", () => {
-              inputSearch.value = suggestion;
+              inputSearch.value = suggestion.name;
               suggestionsBox.innerHTML = "";
+              window.location.href = suggestion.url; 
             });
 
             suggestionsBox.appendChild(suggestionItem);
