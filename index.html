@@ -455,7 +455,6 @@
     </script>
 
     <script>
-      
       const dummySuggestions = [
         "Anorexia Nervosa",
         "Bulimia Nervosa",
@@ -469,38 +468,31 @@
         "Depression and Eating Disorders",
       ];
 
-      
       const inputSearch = document.getElementById("search-input");
       const suggestionsBox = document.getElementById("suggestions");
 
-      
       function filterSuggestions(input) {
         return dummySuggestions.filter((suggestion) =>
           suggestion.toLowerCase().includes(input.toLowerCase())
         );
       }
 
-      
       inputSearch.addEventListener("input", (event) => {
         const input = event.target.value;
 
-    
         suggestionsBox.innerHTML = "";
 
-        
         if (input) {
           const filteredSuggestions = filterSuggestions(input);
 
-  
           filteredSuggestions.forEach((suggestion) => {
             const suggestionItem = document.createElement("div");
             suggestionItem.className = "suggestion-item";
             suggestionItem.textContent = suggestion;
 
-        
             suggestionItem.addEventListener("click", () => {
               inputSearch.value = suggestion;
-              suggestionsBox.innerHTML = ""; 
+              suggestionsBox.innerHTML = "";
             });
 
             suggestionsBox.appendChild(suggestionItem);

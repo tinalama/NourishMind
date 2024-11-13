@@ -135,7 +135,7 @@ select {
 }
 
 button,
-input,
+.contact-input,
 select,
 textarea {
   color: #5a5a5a;
@@ -143,7 +143,7 @@ textarea {
   margin: 0;
 }
 
-input {
+.contact-input {
   line-height: normal;
 }
 
@@ -191,8 +191,8 @@ h1 {
   width: 45%;
 }
 
-input[type="text"],
-[type="email"],
+.email_input,
+.contact-input,
 select,
 textarea {
   background: none;
@@ -217,8 +217,8 @@ textarea {
   transition: all 0.3s;
 }
 
-input[type="text"]:focus,
-[type="email"]:focus,
+.email_input:focus,
+.contact-input:focus,
 textarea:focus {
   outline: none;
   padding: 0 0 0.875em 0;
@@ -359,8 +359,8 @@ textarea {
     width: 53px;
   }
 
-  input[type="text"],
-  [type="email"],
+  .email_input,
+  .contact-input,
   select,
   textarea {
     font-size: 0.875em;
