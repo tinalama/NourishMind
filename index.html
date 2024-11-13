@@ -39,7 +39,9 @@
           <button class="search-btn" id="search-btn">
             <i class="fas fa-search"></i>
           </button>
+          <div class="suggestions" id="suggestions"></div>
         </div>
+
         <a
           href="https://tinalama.github.io/NourishMind/contact%20us/contactUs.html"
           ><button class="contact-btn">Contact a Professional</button></a
@@ -450,6 +452,61 @@
 
       // Start the auto slide when the page loads
       autoSlides();
+    </script>
+
+    <script>
+      const suggestionsData = [
+        {
+          text: "Understanding Anorexia",
+          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/anorexiaBlog.html",
+        },
+        {
+          text: "Bulimia: Coping Mechanisms",
+          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/bulimiaBlog.html",
+        },
+        {
+          text: "Binge Eating Disorder Explained",
+          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/bingeEatingBlog.html",
+        },
+        {
+          text: "Signs of Eating Disorders",
+          link: "https://tinalama.github.io/NourishMind/blogPage/blogPage.html",
+        },
+      ];
+
+      const inputSearch = document.getElementById("search-input");
+      const suggestionsBox = document.getElementById("suggestions");
+
+      function showSuggestions() {
+        const query = inputSearch.value.toLowerCase();
+        suggestionsBox.innerHTML = ""; // Clear previous suggestions
+
+        if (query) {
+          const filteredSuggestions = suggestionsData.filter((suggestion) =>
+            suggestion.text.toLowerCase().includes(query)
+          );
+
+          filteredSuggestions.forEach((suggestion) => {
+            const suggestionItem = document.createElement("a");
+            suggestionItem.href = suggestion.link;
+            suggestionItem.textContent = suggestion.text;
+            suggestionsBox.appendChild(suggestionItem);
+          });
+
+          suggestionsBox.style.display = filteredSuggestions.length
+            ? "block"
+            : "none";
+        } else {
+          suggestionsBox.style.display = "none";
+        }
+      }
+
+      // Hide suggestions when clicking outside the search bar
+      document.addEventListener("click", (e) => {
+        if (!document.getElementById("search-container").contains(e.target)) {
+          suggestionsBox.style.display = "none";
+        }
+      });
     </script>
   </body>
 </html>

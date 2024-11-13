@@ -310,11 +310,7 @@ textarea {
   color: #f2f3eb;
 }
 
-@media screen and (max-width: 768px) {
-  .contact-form {
-    margin: 20px auto;
-    width: 95%;
-  }
+@media screen and (max-width: 1070px) {
   .experts-cards {
     display: flex;
     flex-direction: column;
@@ -324,6 +320,14 @@ textarea {
   .experts-cards-bottom {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    margin: 20px auto;
+    width: 95%;
   }
 }
 
