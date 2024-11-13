@@ -455,56 +455,56 @@
     </script>
 
     <script>
-      const suggestionsData = [
-        {
-          text: "Understanding Anorexia",
-          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/anorexiaBlog.html",
-        },
-        {
-          text: "Bulimia: Coping Mechanisms",
-          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/bulimiaBlog.html",
-        },
-        {
-          text: "Binge Eating Disorder Explained",
-          link: "https://tinalama.github.io/NourishMind/detailedBlogPage/bingeEatingBlog.html",
-        },
-        {
-          text: "Signs of Eating Disorders",
-          link: "https://tinalama.github.io/NourishMind/blogPage/blogPage.html",
-        },
+      
+      const dummySuggestions = [
+        "Anorexia Nervosa",
+        "Bulimia Nervosa",
+        "Binge Eating Disorder",
+        "Mental Health",
+        "Self-Care Tips",
+        "Symptoms of Eating Disorders",
+        "Healthy Eating",
+        "Mindful Eating",
+        "Overcoming Anxiety",
+        "Depression and Eating Disorders",
       ];
 
+      
       const inputSearch = document.getElementById("search-input");
       const suggestionsBox = document.getElementById("suggestions");
 
-      function showSuggestions() {
-        const query = inputSearch.value.toLowerCase();
-        suggestionsBox.innerHTML = ""; // Clear previous suggestions
-
-        if (query) {
-          const filteredSuggestions = suggestionsData.filter((suggestion) =>
-            suggestion.text.toLowerCase().includes(query)
-          );
-
-          filteredSuggestions.forEach((suggestion) => {
-            const suggestionItem = document.createElement("a");
-            suggestionItem.href = suggestion.link;
-            suggestionItem.textContent = suggestion.text;
-            suggestionsBox.appendChild(suggestionItem);
-          });
-
-          suggestionsBox.style.display = filteredSuggestions.length
-            ? "block"
-            : "none";
-        } else {
-          suggestionsBox.style.display = "none";
-        }
+      
+      function filterSuggestions(input) {
+        return dummySuggestions.filter((suggestion) =>
+          suggestion.toLowerCase().includes(input.toLowerCase())
+        );
       }
 
-      // Hide suggestions when clicking outside the search bar
-      document.addEventListener("click", (e) => {
-        if (!document.getElementById("search-container").contains(e.target)) {
-          suggestionsBox.style.display = "none";
+      
+      inputSearch.addEventListener("input", (event) => {
+        const input = event.target.value;
+
+    
+        suggestionsBox.innerHTML = "";
+
+        
+        if (input) {
+          const filteredSuggestions = filterSuggestions(input);
+
+  
+          filteredSuggestions.forEach((suggestion) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.className = "suggestion-item";
+            suggestionItem.textContent = suggestion;
+
+        
+            suggestionItem.addEventListener("click", () => {
+              inputSearch.value = suggestion;
+              suggestionsBox.innerHTML = ""; 
+            });
+
+            suggestionsBox.appendChild(suggestionItem);
+          });
         }
       });
     </script>

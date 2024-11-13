@@ -52,7 +52,7 @@ nav {
   background-image: url(./MagnifyingGlass.png);
   background-repeat: no-repeat;
   background-position: left;
-  padding: 16px 45px;
+  padding: 16px 65px;
   background-color: #f8f4ed;
   border: 0px solid #000;
   box-shadow: none;
@@ -136,29 +136,29 @@ nav {
   font-size: 24px;
 }
 
-.suggestions {
+
+#suggestions {
   position: absolute;
-  background-color: white;
-  border: 1px solid #ddd;
+  top: 100%;
+  left: 0;
   width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
   max-height: 200px;
   overflow-y: auto;
-  display: none;
   z-index: 1000;
 }
 
-.suggestions a {
-  display: block;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
 }
 
-.suggestions a:hover {
+.suggestion-item:hover {
   background-color: #f0f0f0;
 }
 
-/* Responsive Styles */
+
 @media only screen and (max-width: 768px) {
   .nav-links {
     position: absolute;
