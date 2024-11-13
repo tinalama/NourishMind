@@ -70,37 +70,11 @@ nav {
   display: none;
 }
 
-/* .contact-btn {
-  background-color: transparent;
-  border: none;
-  color: #000;
-  padding: 20px 20px;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 200px;
-  white-space: nowrap;
-  border: 1px solid #6a6666;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.15s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contact-btn:hover {
-  background-color: #7a7979;
-  color: white;
-}
-
-.contact-btn:active {
-  background-color: #6a6666;
-} */
-
 .contact-btn {
   background-color: transparent;
   border: none;
   color: #000;
-  padding: 10px 10px;
+  padding: 12px 10px;
   font-size: 1rem;
   max-width: 200px;
   white-space: nowrap;
